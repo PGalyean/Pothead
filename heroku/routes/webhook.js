@@ -24,19 +24,20 @@ module.exports = function(req, res) {
 	var query = ` {
 		${body.data.queryName}(_id: "${body.data.contentId}") {
 			_id
-			name
-			relationship {
-				_id
-				lightRequirement
-				name
-			}
-			wateringRequirements
+	    climbing
+	    creeping
+	    flowering
+	    light
+	    name
+	    waterNeeds
 		}
 	}`;
 
 	takeshape(query).then(result => {
 
-		console.log(result);
+		console.log('')
+		console.log(result)
+		console.log('')
 
 		var obj = result.data[body.data.queryName];
 		obj.objectID = obj._id

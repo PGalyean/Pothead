@@ -11,30 +11,23 @@ const index = algolia.initIndex('cheese');
 
 module.exports = (req, res) => {
 
-	if (!req.query.contentType) {
-		res.status(200).send('Sorry you need to the the content type. ?contentType=cheese')
-		return
-	}
-
 	// Set the query name.
-	var queryName = 'get' + titleCase(req.query.contentType) + 'List'
+	var queryName = 'getPlantList'
 
 	// Set the Query for the content type.
 	var query = `{
 		${queryName} {
 			items {
 				_id
+		    climbing
+		    creeping
+		    flowering
+		    light
 		    name
-		    relationship {
-		      _id
-		      lightRequirement
-		      name
-		    }
-		    wateringRequirements
+		    waterNeeds
 			}
 		}
-	}
-	`
+	}`
 
 	takeshape(query).then(result => {
 
