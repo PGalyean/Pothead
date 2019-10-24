@@ -1,4 +1,4 @@
-# Hothead Search Engine
+# Pothead Search Engine
 This repo provides a the node.js API code setting up Webhooks on Heroku.
 
 Required
