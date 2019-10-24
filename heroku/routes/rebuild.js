@@ -7,7 +7,7 @@ const algolia = require('../services/algolia');
 const takeshape = require('../services/takeshape')
 
 // Setup the index.
-const index = algolia.initIndex('cheese');
+const index = algolia.initIndex('plant');
 
 module.exports = (req, res) => {
 
