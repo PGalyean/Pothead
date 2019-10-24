@@ -29,6 +29,23 @@ module.exports = function(req, res) {
 	    flowering
 	    light
 	    name
+	    photo {
+	      _id
+	      caption
+	      credit
+	      description
+	      filename
+	      mimeType
+	      path
+	      sourceUrl
+	      title
+	      uploadStatus
+	    }
+	    supplier {
+	      _id
+	      location
+	      name
+	    }
 	    waterNeeds
 		}
 	}`;
